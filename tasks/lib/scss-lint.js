@@ -112,7 +112,6 @@ exports.init = function (grunt) {
 
   exports.lint = function (files, options, done) {
     var args = [],
-        config = options['config'],
         exclude = options['exclude'],
         exec = require('child_process').exec,
         env = process.env,
@@ -123,11 +122,6 @@ exports.init = function (grunt) {
 
     if (options.bundleExec) {
       args.unshift('bundle', 'exec');
-    }
-
-    if (config) {
-      args.push('-c');
-      args.push(config);
     }
 
     if (exclude) {
