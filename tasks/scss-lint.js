@@ -10,7 +10,7 @@ module.exports = function (grunt) {
         opts, message;
 
     opts = this.options({
-      linters: null,
+      config: '.scss-lint.yml',
       reporterOutput: null,
       bundleExec: false,
       colorizeOutput: true,
