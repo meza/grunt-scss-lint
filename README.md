@@ -52,12 +52,11 @@ For colors to work on Windows, you first need to install 2 extra gems. This is b
 
 Group related linted files for more easier error review. XML output will still be default from scss-lint.
 
-#### config
+#### ~~config~~
 
-- Type: `String`
-- Default: `scss-lint`'s [default config file](https://github.com/causes/scss-lint/blob/master/config/default.yml).
-
-~~**[Note that this isn't working correctly yet](https://github.com/causes/scss-lint/issues/46).**~~
+You can't control the config location of scss-lint anymore.
+Use `scss-lint`'s [default config file](https://github.com/causes/scss-lint/blob/master/config/default.yml)
+as ```.scss-lint.yml```
 
 #### reporterOutput
 
@@ -78,7 +77,6 @@ grunt.initConfig({
     ],
     options: {
       bundleExec: true,
-      config: '.scss-lint.yml',
       reporterOutput: 'scss-lint-report.xml',
       colorizeOutput: true
     },
