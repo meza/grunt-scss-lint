@@ -113,7 +113,6 @@ exports.init = function (grunt) {
   exports.lint = function (files, options, done) {
     var args = [],
         exclude = options['exclude'],
-        linters = options['ignoreLinters']
         exec = require('child_process').exec,
         env = process.env,
         fileCount = Array.isArray(files) ? files.length : 1,
@@ -128,11 +127,6 @@ exports.init = function (grunt) {
     if (exclude) {
       args.push('-e');
       args.push(grunt.file.expand(exclude).join(','));
-    }
-    
-    if (linters) {
-      args.push('-i');
-      args.push(linters.join(','));
     }
 
     if (options.colorizeOutput) {
